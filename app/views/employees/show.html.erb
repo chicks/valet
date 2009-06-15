@@ -1,0 +1,53 @@
+<p>
+  <b>Type:</b>
+  <%=h @employee.type %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%=h @employee.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @employee.last_name %>
+</p>
+
+<p>
+  <b>Nick name:</b>
+  <%=h @employee.nick_name %>
+</p>
+
+<p>
+  <b>Maiden name:</b>
+  <%=h @employee.maiden_name %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%=h @employee.department %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @employee.title %>
+</p>
+
+<p>
+  <b>Manager:</b>
+  <%=h @employee.manager %>
+</p>
+
+<p>
+  <b>Office:</b>
+  <%=h @employee.office %>
+</p>
+
+<p>
+  <b>Remote:</b>
+  <%=h @employee.remote %>
+</p>
+
+
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>

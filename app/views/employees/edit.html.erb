@@ -1,0 +1,52 @@
+<h1>Editing employee</h1>
+
+<% form_for(@employee) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :nick_name %><br />
+    <%= f.text_field :nick_name %>
+  </p>
+  <p>
+    <%= f.label :maiden_name %><br />
+    <%= f.text_field :maiden_name %>
+  </p>
+  <p>
+    <%= f.label :department_id %><br />
+    <%= f.text_field :department_id %>
+  </p>
+  <p>
+    <%= f.label :title_id %><br />
+    <%= f.text_field :title_id %>
+  </p>
+  <p>
+    <%= f.label :manager_id %><br />
+    <%= f.text_field :manager_id %>
+  </p>
+  <p>
+    <%= f.label :office_id %><br />
+    <%= f.text_field :office_id %>
+  </p>
+  <p>
+    <%= f.label :remote %><br />
+    <%= f.check_box :remote %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @employee %> |
+<%= link_to 'Back', employees_path %>

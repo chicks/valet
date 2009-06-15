@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+MacBook Pro:
+  id: 1
+  asset_id: 1
+  type: SerialNumber
+  uid: AReallyLongSerialNumber092342
+
+iPhone:
+  id: 2
+  asset_id: 2
+  type: SerialNumber
+  uid: AnotherReallyLongSerialNumber
+  
+iPhone ESN:
+  id: 3
+  asset_id: 2
+  type: ESN
+  uid: 923840239523
+
+Wireless Data Card:
+  id: 4
+  asset_id: 3
+  type: SerialNumber
+  uid: 209342fdskj2k34239sd92324

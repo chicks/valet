@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+MacBook Pro:
+  id: 1
+  type: Laptop
+  make: Apple
+  model: MacBook Pro
+  purchase_order_id: 1
+
+iPhone:
+  id: 2
+  type: MobilePhone
+  make: Apple
+  model: iPhone
+  purchase_order_id: 1
+
+Wireless Data Card:
+  id: 3
+  type: WirelessDataCard
+  make: Pantech
+  model: WD-124
+  purchase_order_id: 2
+

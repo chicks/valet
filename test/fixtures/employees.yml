@@ -1,0 +1,67 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+Eric:
+  id: 1
+  type: CurrentEmployee
+  name: Eric Employee
+  legal_name: Erskatz Employee
+  department_id: 1
+  title_id: 1
+  manager_id: 2
+  office_id: 1
+  remote: false
+  start_date: 2000-01-01
+
+Molly:
+  id: 2
+  type: CurrentEmployee
+  name: Molly Manager
+  legal_name: Molly Manager
+  department_id: 1
+  title_id: 2
+  manager_id: 3
+  office_id: 1
+  remote: false
+  start_date: 2000-01-01
+
+
+Danny:
+  id: 3 
+  type: CurrentEmployee
+  name: Danny Director
+  legal_name: Daniel Director
+  department_id: 1
+  title_id: 3
+  manager_id: 4
+  office_id: 2
+  remote: false
+  start_date: 2000-01-01
+
+
+Erwin:
+  id: 4 
+  type: CurrentEmployee
+  name: Erwin Executive
+  legal_name: Erwin Executive
+  department_id: 2
+  title_id: 4
+  manager_id: 4
+  office_id: 2
+  remote: false
+  start_date: 2000-01-01
+
+
+Tommy:
+  id: 5
+  type: FormerEmployee
+  name: Tommy Terminated
+  legal_name: Thomas Terminated
+  department_id: 1
+  title_id: 1
+  manager_id: 2
+  office_id: 1
+  remote: true
+  start_date: 2000-01-01
+  end_date: 2002-01-01
+
+

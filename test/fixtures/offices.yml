@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+RTP:
+  id: 1
+  name: RTP
+  address: 1001 First Avenue, Raleigh NC 00000
+
+Manhattan:
+  id: 2
+  name: Manhattan
+  address: 1234 Second Avenue, New York, NY 12345

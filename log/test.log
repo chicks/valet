@@ -1,0 +1,846 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#create (for 0.0.0.0 at 2009-06-14 10:53:46) [POST]
+  Parameters: {"employee"=>{}}
+  [4;35;1mEmployee Create (0.6ms)[0m   [0mINSERT INTO "employees" ("maiden_name", "office_id", "updated_at", "manager_id", "type", "title_id", "nick_name", "first_name", "department_id", "last_name", "remote", "created_at") VALUES(NULL, NULL, '2009-06-14 17:53:46', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-06-14 17:53:46')[0m
+Redirected to http://test.host/employees/5
+Completed in 12ms (DB: 6) | 302 Found [http://test.host/employees?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-06-14 10:53:46) [GET]
+  [4;36;1mEmployee Load (1.1ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.6ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 30ms (View: 22, DB: 7) | 200 OK [http://test.host/employees]
+
+
+Processing EmployeesController#new (for 0.0.0.0 at 2009-06-14 10:53:46) [GET]
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/employees/new]
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#create (for 0.0.0.0 at 2009-06-14 11:00:11) [POST]
+  Parameters: {"employee"=>{}}
+  [4;35;1mEmployee Create (0.6ms)[0m   [0mINSERT INTO "employees" ("maiden_name", "office_id", "updated_at", "manager_id", "type", "title_id", "nick_name", "first_name", "department_id", "last_name", "remote", "created_at") VALUES(NULL, NULL, '2009-06-14 18:00:11', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-06-14 18:00:11')[0m
+Redirected to http://test.host/employees/5
+Completed in 12ms (DB: 6) | 302 Found [http://test.host/employees?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-06-14 11:00:11) [GET]
+  [4;36;1mEmployee Load (1.2ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.6ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.2ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 30ms (View: 23, DB: 7) | 200 OK [http://test.host/employees]
+
+
+Processing EmployeesController#new (for 0.0.0.0 at 2009-06-14 11:00:11) [GET]
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/employees/new]
+  [4;36;1mEmployee Load (0.6ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#create (for 0.0.0.0 at 2009-06-14 11:00:43) [POST]
+  Parameters: {"employee"=>{}}
+  [4;35;1mEmployee Create (0.6ms)[0m   [0mINSERT INTO "employees" ("maiden_name", "office_id", "updated_at", "manager_id", "type", "title_id", "nick_name", "first_name", "department_id", "last_name", "remote", "created_at") VALUES(NULL, NULL, '2009-06-14 18:00:43', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-06-14 18:00:43')[0m
+Redirected to http://test.host/employees/5
+Completed in 12ms (DB: 6) | 302 Found [http://test.host/employees?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-06-14 11:00:43) [GET]
+  [4;36;1mEmployee Load (1.2ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.6ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.2ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 31ms (View: 23, DB: 7) | 200 OK [http://test.host/employees]
+
+
+Processing EmployeesController#new (for 0.0.0.0 at 2009-06-14 11:00:44) [GET]
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/employees/new]
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#create (for 0.0.0.0 at 2009-06-14 11:02:50) [POST]
+  Parameters: {"employee"=>{}}
+  [4;35;1mEmployee Create (0.6ms)[0m   [0mINSERT INTO "employees" ("maiden_name", "office_id", "updated_at", "manager_id", "type", "title_id", "nick_name", "first_name", "department_id", "last_name", "remote", "created_at") VALUES(NULL, NULL, '2009-06-14 18:02:50', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-06-14 18:02:50')[0m
+Redirected to http://test.host/employees/5
+Completed in 12ms (DB: 6) | 302 Found [http://test.host/employees?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#destroy (for 0.0.0.0 at 2009-06-14 11:02:50) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+  [4;36;1mEmployee Destroy (0.4ms)[0m   [0;1mDELETE FROM "employees" WHERE "id" = 1[0m
+Redirected to http://test.host/employees
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/employees/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#edit (for 0.0.0.0 at 2009-06-14 11:02:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/edit
+Completed in 12ms (View: 11, DB: 1) | 200 OK [http://test.host/employees/1/edit]
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-06-14 11:02:50) [GET]
+  [4;36;1mEmployee Load (1.2ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.6ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.2ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 28ms (View: 20, DB: 6) | 200 OK [http://test.host/employees]
+
+
+Processing EmployeesController#new (for 0.0.0.0 at 2009-06-14 11:02:50) [GET]
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/employees/new]
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#show (for 0.0.0.0 at 2009-06-14 11:02:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/show
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.2ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://test.host/employees/1]
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#create (for 0.0.0.0 at 2009-06-14 11:03:13) [POST]
+  Parameters: {"employee"=>{}}
+  [4;35;1mEmployee Create (0.6ms)[0m   [0mINSERT INTO "employees" ("maiden_name", "office_id", "updated_at", "manager_id", "type", "title_id", "nick_name", "first_name", "department_id", "last_name", "remote", "created_at") VALUES(NULL, NULL, '2009-06-14 18:03:13', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-06-14 18:03:13')[0m
+Redirected to http://test.host/employees/5
+Completed in 12ms (DB: 6) | 302 Found [http://test.host/employees?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#destroy (for 0.0.0.0 at 2009-06-14 11:03:13) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+  [4;36;1mEmployee Destroy (0.3ms)[0m   [0;1mDELETE FROM "employees" WHERE "id" = 1[0m
+Redirected to http://test.host/employees
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/employees/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#edit (for 0.0.0.0 at 2009-06-14 11:03:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/edit
+Completed in 12ms (View: 11, DB: 1) | 200 OK [http://test.host/employees/1/edit]
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-06-14 11:03:13) [GET]
+  [4;36;1mEmployee Load (1.2ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.6ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mOffice Load (0.2ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 28ms (View: 20, DB: 6) | 200 OK [http://test.host/employees]
+
+
+Processing EmployeesController#new (for 0.0.0.0 at 2009-06-14 11:03:13) [GET]
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/employees/new]
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#show (for 0.0.0.0 at 2009-06-14 11:03:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/show
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://test.host/employees/1]
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#update (for 0.0.0.0 at 2009-06-14 11:03:13) [PUT]
+  Parameters: {"employee"=>{}, "id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Redirected to http://test.host/employees/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/employees/1?]
+  [4;36;1mAsset Load (0.4ms)[0m   [0;1mSELECT * FROM "assets" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#create (for 0.0.0.0 at 2009-06-14 11:04:28) [POST]
+  Parameters: {"employee"=>{}}
+  [4;35;1mEmployee Create (0.6ms)[0m   [0mINSERT INTO "employees" ("maiden_name", "office_id", "updated_at", "manager_id", "type", "title_id", "nick_name", "first_name", "department_id", "last_name", "remote", "created_at") VALUES(NULL, NULL, '2009-06-14 18:04:28', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-06-14 18:04:28')[0m
+Redirected to http://test.host/employees/5
+Completed in 11ms (DB: 6) | 302 Found [http://test.host/employees?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#destroy (for 0.0.0.0 at 2009-06-14 11:04:28) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+  [4;36;1mEmployee Destroy (0.4ms)[0m   [0;1mDELETE FROM "employees" WHERE "id" = 1[0m
+Redirected to http://test.host/employees
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/employees/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.6ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#edit (for 0.0.0.0 at 2009-06-14 11:04:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/edit
+Completed in 12ms (View: 11, DB: 1) | 200 OK [http://test.host/employees/1/edit]
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-06-14 11:04:28) [GET]
+  [4;36;1mEmployee Load (1.1ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.6ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.2ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mOffice Load (0.2ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 28ms (View: 20, DB: 6) | 200 OK [http://test.host/employees]
+
+
+Processing EmployeesController#new (for 0.0.0.0 at 2009-06-14 11:04:28) [GET]
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/employees/new]
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#show (for 0.0.0.0 at 2009-06-14 11:04:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/show
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.2ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://test.host/employees/1]
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#update (for 0.0.0.0 at 2009-06-14 11:04:28) [PUT]
+  Parameters: {"employee"=>{}, "id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Redirected to http://test.host/employees/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/employees/1?]
+  [4;36;1mAsset Load (0.4ms)[0m   [0;1mSELECT * FROM "assets" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#create (for 0.0.0.0 at 2009-06-14 11:06:01) [POST]
+  Parameters: {"employee"=>{}}
+  [4;35;1mEmployee Create (0.6ms)[0m   [0mINSERT INTO "employees" ("maiden_name", "office_id", "updated_at", "manager_id", "type", "title_id", "nick_name", "first_name", "department_id", "last_name", "remote", "created_at") VALUES(NULL, NULL, '2009-06-14 18:06:01', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-06-14 18:06:01')[0m
+Redirected to http://test.host/employees/5
+Completed in 12ms (DB: 6) | 302 Found [http://test.host/employees?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#destroy (for 0.0.0.0 at 2009-06-14 11:06:01) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+  [4;36;1mEmployee Destroy (0.3ms)[0m   [0;1mDELETE FROM "employees" WHERE "id" = 1[0m
+Redirected to http://test.host/employees
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/employees/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#edit (for 0.0.0.0 at 2009-06-14 11:06:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/edit
+Completed in 12ms (View: 11, DB: 1) | 200 OK [http://test.host/employees/1/edit]
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-06-14 11:06:01) [GET]
+  [4;36;1mEmployee Load (1.2ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.6ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.2ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 28ms (View: 21, DB: 6) | 200 OK [http://test.host/employees]
+
+
+Processing EmployeesController#new (for 0.0.0.0 at 2009-06-14 11:06:01) [GET]
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/employees/new]
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#show (for 0.0.0.0 at 2009-06-14 11:06:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/show
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://test.host/employees/1]
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#update (for 0.0.0.0 at 2009-06-14 11:06:01) [PUT]
+  Parameters: {"employee"=>{}, "id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Redirected to http://test.host/employees/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/employees/1?]
+  [4;36;1mAsset Load (0.4ms)[0m   [0;1mSELECT * FROM "assets" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#create (for 0.0.0.0 at 2009-06-14 11:06:49) [POST]
+  Parameters: {"employee"=>{}}
+  [4;35;1mEmployee Create (0.6ms)[0m   [0mINSERT INTO "employees" ("maiden_name", "office_id", "updated_at", "manager_id", "type", "title_id", "nick_name", "first_name", "department_id", "last_name", "remote", "created_at") VALUES(NULL, NULL, '2009-06-14 18:06:49', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-06-14 18:06:49')[0m
+Redirected to http://test.host/employees/5
+Completed in 12ms (DB: 6) | 302 Found [http://test.host/employees?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#destroy (for 0.0.0.0 at 2009-06-14 11:06:49) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+  [4;36;1mEmployee Destroy (0.4ms)[0m   [0;1mDELETE FROM "employees" WHERE "id" = 1[0m
+Redirected to http://test.host/employees
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/employees/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#edit (for 0.0.0.0 at 2009-06-14 11:06:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/edit
+Completed in 12ms (View: 11, DB: 1) | 200 OK [http://test.host/employees/1/edit]
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-06-14 11:06:49) [GET]
+  [4;36;1mEmployee Load (1.1ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.6ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mOffice Load (0.2ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 28ms (View: 20, DB: 6) | 200 OK [http://test.host/employees]
+
+
+Processing EmployeesController#new (for 0.0.0.0 at 2009-06-14 11:06:49) [GET]
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/employees/new]
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#show (for 0.0.0.0 at 2009-06-14 11:06:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/show
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://test.host/employees/1]
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#update (for 0.0.0.0 at 2009-06-14 11:06:49) [PUT]
+  Parameters: {"employee"=>{}, "id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Redirected to http://test.host/employees/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/employees/1?]
+  [4;36;1mAsset Load (0.4ms)[0m   [0;1mSELECT * FROM "assets" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#create (for 0.0.0.0 at 2009-06-14 11:09:40) [POST]
+  Parameters: {"employee"=>{}}
+  [4;35;1mEmployee Create (0.6ms)[0m   [0mINSERT INTO "employees" ("maiden_name", "office_id", "updated_at", "manager_id", "type", "title_id", "nick_name", "first_name", "department_id", "last_name", "remote", "created_at") VALUES(NULL, NULL, '2009-06-14 18:09:40', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-06-14 18:09:40')[0m
+Redirected to http://test.host/employees/5
+Completed in 12ms (DB: 6) | 302 Found [http://test.host/employees?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#destroy (for 0.0.0.0 at 2009-06-14 11:09:40) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+  [4;36;1mEmployee Destroy (0.4ms)[0m   [0;1mDELETE FROM "employees" WHERE "id" = 1[0m
+Redirected to http://test.host/employees
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/employees/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#edit (for 0.0.0.0 at 2009-06-14 11:09:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/edit
+Completed in 12ms (View: 11, DB: 1) | 200 OK [http://test.host/employees/1/edit]
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-06-14 11:09:40) [GET]
+  [4;36;1mEmployee Load (1.2ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.6ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 28ms (View: 20, DB: 6) | 200 OK [http://test.host/employees]
+
+
+Processing EmployeesController#new (for 0.0.0.0 at 2009-06-14 11:09:40) [GET]
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/employees/new]
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#show (for 0.0.0.0 at 2009-06-14 11:09:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/show
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://test.host/employees/1]
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#update (for 0.0.0.0 at 2009-06-14 11:09:40) [PUT]
+  Parameters: {"employee"=>{}, "id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Redirected to http://test.host/employees/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/employees/1?]
+  [4;36;1mAsset Load (0.4ms)[0m   [0;1mSELECT * FROM "assets" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#create (for 0.0.0.0 at 2009-06-14 11:10:23) [POST]
+  Parameters: {"employee"=>{}}
+  [4;35;1mEmployee Create (0.6ms)[0m   [0mINSERT INTO "employees" ("maiden_name", "office_id", "updated_at", "manager_id", "type", "title_id", "nick_name", "first_name", "department_id", "last_name", "remote", "created_at") VALUES(NULL, NULL, '2009-06-14 18:10:23', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-06-14 18:10:23')[0m
+Redirected to http://test.host/employees/5
+Completed in 12ms (DB: 6) | 302 Found [http://test.host/employees?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#destroy (for 0.0.0.0 at 2009-06-14 11:10:23) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+  [4;36;1mEmployee Destroy (0.3ms)[0m   [0;1mDELETE FROM "employees" WHERE "id" = 1[0m
+Redirected to http://test.host/employees
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/employees/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#edit (for 0.0.0.0 at 2009-06-14 11:10:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/edit
+Completed in 12ms (View: 11, DB: 1) | 200 OK [http://test.host/employees/1/edit]
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-06-14 11:10:23) [GET]
+  [4;36;1mEmployee Load (1.1ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.6ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mOffice Load (0.2ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 28ms (View: 20, DB: 6) | 200 OK [http://test.host/employees]
+
+
+Processing EmployeesController#new (for 0.0.0.0 at 2009-06-14 11:10:23) [GET]
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 8ms (View: 8, DB: 0) | 200 OK [http://test.host/employees/new]
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#show (for 0.0.0.0 at 2009-06-14 11:10:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployee Load (0.6ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/show
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://test.host/employees/1]
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#update (for 0.0.0.0 at 2009-06-14 11:10:23) [PUT]
+  Parameters: {"employee"=>{}, "id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Redirected to http://test.host/employees/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/employees/1?]
+  [4;36;1mAsset Load (0.4ms)[0m   [0;1mSELECT * FROM "assets" LIMIT 1[0m
+  [4;35;1mAsset Load (0.4ms)[0m   [0mSELECT * FROM "assets" LIMIT 1[0m
+  [4;36;1mUniqueIdentifier Load (0.3ms)[0m   [0;1mSELECT * FROM "unique_identifiers" WHERE ("unique_identifiers".asset_id = 1) LIMIT 1[0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#create (for 0.0.0.0 at 2009-06-14 11:11:38) [POST]
+  Parameters: {"employee"=>{}}
+  [4;35;1mEmployee Create (0.6ms)[0m   [0mINSERT INTO "employees" ("maiden_name", "office_id", "updated_at", "manager_id", "type", "title_id", "nick_name", "first_name", "department_id", "last_name", "remote", "created_at") VALUES(NULL, NULL, '2009-06-14 18:11:38', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-06-14 18:11:38')[0m
+Redirected to http://test.host/employees/5
+Completed in 12ms (DB: 6) | 302 Found [http://test.host/employees?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#destroy (for 0.0.0.0 at 2009-06-14 11:11:38) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+  [4;36;1mEmployee Destroy (0.4ms)[0m   [0;1mDELETE FROM "employees" WHERE "id" = 1[0m
+Redirected to http://test.host/employees
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/employees/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#edit (for 0.0.0.0 at 2009-06-14 11:11:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/edit
+Completed in 12ms (View: 11, DB: 1) | 200 OK [http://test.host/employees/1/edit]
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-06-14 11:11:38) [GET]
+  [4;36;1mEmployee Load (1.2ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.6ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.2ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mDepartment Load (0.2ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 28ms (View: 21, DB: 6) | 200 OK [http://test.host/employees]
+
+
+Processing EmployeesController#new (for 0.0.0.0 at 2009-06-14 11:11:38) [GET]
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://test.host/employees/new]
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#show (for 0.0.0.0 at 2009-06-14 11:11:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/show
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 9ms (View: 6, DB: 2) | 200 OK [http://test.host/employees/1]
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#update (for 0.0.0.0 at 2009-06-14 11:11:38) [PUT]
+  Parameters: {"employee"=>{}, "id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Redirected to http://test.host/employees/1
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/employees/1?]
+  [4;36;1mAsset Load (0.4ms)[0m   [0;1mSELECT * FROM "assets" LIMIT 1[0m
+  [4;35;1mAsset Load (0.4ms)[0m   [0mSELECT * FROM "assets" LIMIT 1[0m
+  [4;36;1mUniqueIdentifier Load (0.4ms)[0m   [0;1mSELECT * FROM "unique_identifiers" WHERE ("unique_identifiers".asset_id = 1) LIMIT 1[0m
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+
+
+Processing EmployeesController#create (for 0.0.0.0 at 2009-06-14 11:47:48) [POST]
+  Parameters: {"employee"=>{}}
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 27ms (View: 12, DB: 5) | 200 OK [http://test.host/employees?]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#destroy (for 0.0.0.0 at 2009-06-14 11:47:48) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployee Load (0.6ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+  [4;35;1mEmployee Destroy (0.4ms)[0m   [0mDELETE FROM "employees" WHERE "id" = 1[0m
+Redirected to http://test.host/employees
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/employees/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "employees" [0m
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#edit (for 0.0.0.0 at 2009-06-14 11:47:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/edit
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://test.host/employees/1/edit]
+
+
+Processing EmployeesController#index (for 0.0.0.0 at 2009-06-14 11:47:48) [GET]
+  [4;35;1mEmployee Load (1.5ms)[0m   [0mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;36;1mDepartment Load (0.6ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mDepartment Load (0.2ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mDepartment Load (0.3ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;36;1mDepartment Load (0.2ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;36;1mDepartment Load (0.2ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;35;1mOffice Load (0.2ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 30ms (View: 20, DB: 8) | 200 OK [http://test.host/employees]
+
+
+Processing EmployeesController#new (for 0.0.0.0 at 2009-06-14 11:47:48) [GET]
+Rendering template within layouts/employees
+Rendering employees/new
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/employees/new]
+  [4;36;1mEmployee Load (0.7ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#show (for 0.0.0.0 at 2009-06-14 11:47:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/show
+  [4;36;1mDepartment Load (0.3ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;35;1mOffice Load (0.2ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 9ms (View: 6, DB: 3) | 200 OK [http://test.host/employees/1]
+  [4;36;1mEmployee Load (0.6ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+
+
+Processing EmployeesController#update (for 0.0.0.0 at 2009-06-14 11:47:48) [PUT]
+  Parameters: {"employee"=>{}, "id"=>"1"}
+  [4;35;1mEmployee Load (0.8ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Redirected to http://test.host/employees/1
+Completed in 5ms (DB: 1) | 302 Found [http://test.host/employees/1?]

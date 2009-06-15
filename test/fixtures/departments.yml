@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+Sales:
+  id: 1
+  name: Sales
+
+Administration:
+  id: 2
+  name: Administration

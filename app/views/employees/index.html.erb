@@ -1,0 +1,31 @@
+<h1>Listing employees</h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Name</th>
+    <th>Legal Name</th>
+    <th>Department</th>
+    <th>Title</th>
+    <th>Manager</th>
+    <th>Office</th>
+    <th>Remote</th>
+  </tr>
+
+<% @employees.each do |employee| %>
+  <tr>
+    <td><%=h employee.type %></td>
+    <td><%=h employee.name %></td>
+    <td><%=h employee.legal_name %></td>
+    <td><%=h employee.department %></td>
+    <td><%=h employee.title %></td>
+    <td><%=h employee.manager %></td>
+    <td><%=h employee.office %></td>
+    <td><%=h employee.remote %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New employee', new_employee_path %>

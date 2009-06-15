@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+Eric Employee Laptop:
+  employee_id: 1
+  asset_id: 1
+  start_date: 2009-06-14
+  end_date: 
+
+Eric Employee Phone:
+  employee_id: 1
+  asset_id: 2
+  start_date: 2009-06-14
+  end_date: 
+
+Eric Employee Data Card:
+  employee_id: 1
+  asset_id: 3
+  start_date: 2009-06-14
+  end_date: 

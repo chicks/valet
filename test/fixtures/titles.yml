@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+Account Executive:
+  id: 1
+  name: Account Executive
+
+Sales Manager:
+  id: 2
+  name: Sales Manager
+
+Director of Sales:
+  id: 3
+  name: Director of Sales
+
+CEO:
+  id: 4
+  name: CEO

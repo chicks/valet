@@ -1,0 +1,1797 @@
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployees (20090612231253)
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployees (20090612231929)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("employees")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployees (20090612231929)
+Migrating to CreateDepartments (20090612232656)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090612232656')[0m
+Migrating to CreateTitles (20090612232735)
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090612232735')[0m
+Migrating to CreateOffices (20090612233335)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090612233335')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("departments")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("employees")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("offices")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("titles")[0m
+  [4;36;1mEmployee Load (2.1ms)[0m   [0;1mSELECT * FROM "employees" [0m
+  [4;35;1mDepartment Load (0.7ms)[0m   [0mSELECT * FROM "departments" [0m
+  [4;36;1mEmployee Load (1.8ms)[0m   [0;1mSELECT * FROM "employees" [0m
+  [4;36;1mEmployee Load (1.9ms)[0m   [0;1mSELECT * FROM "employees" [0m
+  [4;35;1mEmployee Load (1.3ms)[0m   [0mSELECT * FROM "employees" [0m
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 16:57:04) [GET]
+  [4;36;1mEmployee Load (2.0ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+Completed in 46ms (View: 32, DB: 2) | 200 OK [http://it-valet.sugarcrm.net/employees]
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 16:57:32) [GET]
+  [4;35;1mEmployee Load (1.6ms)[0m   [0mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+Completed in 25ms (View: 13, DB: 2) | 200 OK [http://it-valet.sugarcrm.net/employees]
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 16:57:34) [GET]
+  [4;36;1mEmployee Load (1.6ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://it-valet.sugarcrm.net/employees]
+  [4;36;1mEmployee Load (1.3ms)[0m   [0;1mSELECT * FROM "employees" [0m
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 16:58:26) [GET]
+  [4;35;1mEmployee Load (1.5ms)[0m   [0mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+Completed in 23ms (View: 10, DB: 2) | 200 OK [http://it-valet.sugarcrm.net/employees]
+  [4;36;1mEmployee Load (1.3ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.7ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mOffice Load (0.5ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mEmployee Load (1.3ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.7ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mEmployee Load (0.7ms)[0m   [0mSELECT * FROM "employees" ORDER BY employees.id DESC LIMIT 1[0m
+  [4;36;1mEmployee Load (0.7ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees".manager_id = 4) [0m
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 17:08:24) [GET]
+  [4;36;1mEmployee Load (1.4ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+Completed in 30ms (View: 11, DB: 1) | 200 OK [http://it-valet.sugarcrm.net/employees]
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 17:08:54) [GET]
+  [4;35;1mEmployee Load (1.6ms)[0m   [0mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+Completed in 89ms (View: 74, DB: 2) | 200 OK [http://it-valet.sugarcrm.net/employees]
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 17:08:56) [GET]
+  [4;36;1mEmployee Load (1.5ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+Completed in 26ms (View: 10, DB: 2) | 200 OK [http://it-valet.sugarcrm.net/employees]
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 17:08:58) [GET]
+  [4;35;1mEmployee Load (1.5ms)[0m   [0mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+Completed in 25ms (View: 11, DB: 2) | 200 OK [http://it-valet.sugarcrm.net/employees]
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 17:09:25) [GET]
+  [4;36;1mEmployee Load (1.5ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.6ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.4ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 68ms (View: 50, DB: 6) | 200 OK [http://it-valet.sugarcrm.net/employees]
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 17:09:57) [GET]
+  [4;35;1mEmployee Load (1.6ms)[0m   [0mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;36;1mDepartment Load (0.4ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;36;1mEmployee Load (0.4ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;36;1mDepartment Load (0.3ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 127ms (View: 43, DB: 5) | 200 OK [http://it-valet.sugarcrm.net/employees]
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 17:11:15) [GET]
+  [4;36;1mEmployee Load (1.5ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+) on line #26 of app/views/employees/index.html.erb:
+23:     <td><%=h employee.maiden_name %></td>
+24:     <td><%=h employee.department %></td>
+25:     <td><%=h employee.title %></td>
+26:     <td><%=h employee.manager %></td>
+27:     <td><%=h employee.office %></td>
+28:     <td><%=h employee.remote %></td>
+29:     <td><%= link_to 'Show', employee %></td>
+
+    app/models/employee.rb:9:in `name'
+    app/models/employee.rb:12:in `to_s'
+    /usr/lib/ruby/1.8/erb.rb:784:in `h'
+    app/views/employees/index.html.erb:26
+    app/views/employees/index.html.erb:17:in `each'
+    app/views/employees/index.html.erb:17
+    app/controllers/employees_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (167.6ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 17:11:25) [GET]
+
+SyntaxError (/home/chicks/it-valet/app/models/employee.rb:9: syntax error
+    self.nick_name . " " . self.last_name
+                      ^):
+  app/controllers/employees_controller.rb:5:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 17:13:19) [GET]
+  [4;36;1mEmployee Load (1.5ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.4ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+) on line #26 of app/views/employees/index.html.erb:
+23:     <td><%=h employee.maiden_name %></td>
+24:     <td><%=h employee.department %></td>
+25:     <td><%=h employee.title %></td>
+26:     <td><%=h employee.manager %></td>
+27:     <td><%=h employee.office %></td>
+28:     <td><%=h employee.remote %></td>
+29:     <td><%= link_to 'Show', employee %></td>
+
+    app/models/employee.rb:9:in `name'
+    app/models/employee.rb:13:in `to_s'
+    /usr/lib/ruby/1.8/erb.rb:784:in `h'
+    app/views/employees/index.html.erb:26
+    app/views/employees/index.html.erb:17:in `each'
+    app/views/employees/index.html.erb:17
+    app/controllers/employees_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (66.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 17:15:04) [GET]
+  [4;36;1mEmployee Load (1.5ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 52ms (View: 35, DB: 5) | 200 OK [http://it-valet.sugarcrm.net/employees]
+
+
+Processing EmployeesController#index (for 10.8.11.54 at 2009-06-12 17:15:26) [GET]
+  [4;35;1mEmployee Load (1.5ms)[0m   [0mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;36;1mDepartment Load (0.4ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.4ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.6ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;36;1mDepartment Load (0.3ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 141ms (View: 123, DB: 6) | 200 OK [http://it-valet.sugarcrm.net/employees]
+
+
+Processing EmployeesController#index (for 10.8.6.11 at 2009-06-14 00:12:52) [GET]
+  [4;36;1mEmployee Load (2.1ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.5ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.4ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 61ms (View: 40, DB: 6) | 200 OK [http://it-valet.sugarcrm.net/employees]
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployees (20090612231929)
+Migrating to CreateDepartments (20090612232656)
+Migrating to CreateTitles (20090612232735)
+Migrating to CreateOffices (20090612233335)
+Migrating to CreateAssetAssignments (20090614074803)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090614074803')[0m
+Migrating to CreateAssets (20090614075322)
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make_id" integer, "model_id" integer, "unique_identifier" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090614075322')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("asset_assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("assets")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("departments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("employees")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("offices")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("titles")[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployees (20090612231929)
+Migrating to CreateDepartments (20090612232656)
+Migrating to CreateTitles (20090612232735)
+Migrating to CreateOffices (20090612233335)
+Migrating to CreateAssetAssignments (20090614074803)
+Migrating to CreateAssets (20090614075322)
+Migrating to CreateAssetMakes (20090614075927)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "asset_makes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090614075927')[0m
+Migrating to CreateAssetModels (20090614075943)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "asset_models" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090614075943')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("asset_assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("asset_makes")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("asset_models")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("assets")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("departments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("employees")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("offices")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("titles")[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployees (20090612231929)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612231929')[0m
+Migrating to CreateDepartments (20090612232656)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612232656')[0m
+Migrating to CreateTitles (20090612232735)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612232735')[0m
+Migrating to CreateOffices (20090612233335)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612233335')[0m
+Migrating to CreateAssetAssignments (20090614074803)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614074803')[0m
+Migrating to CreateAssets (20090614075322)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "unique_identifier_type" varchar(255), "unique_identifier" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("asset_assignments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assets")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("departments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("employees")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("offices")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("titles")[0m
+
+
+Processing EmployeesController#index (for 10.8.6.11 at 2009-06-14 10:35:24) [GET]
+  [4;35;1mEmployee Load (1.0ms)[0m   [0mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+Completed in 17ms (View: 2, DB: 1) | 200 OK [http://it-valet.sugarcrm.net/employees]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployees (20090612231929)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612231929')[0m
+Migrating to CreateDepartments (20090612232656)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612232656')[0m
+Migrating to CreateTitles (20090612232735)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612232735')[0m
+Migrating to CreateOffices (20090612233335)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612233335')[0m
+Migrating to CreateAssetAssignments (20090614074803)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614074803')[0m
+Migrating to CreateAssets (20090614075322)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614075322')[0m
+Migrating to CreateUniqueIdentifiers (20090614173907)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614173907')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("asset_assignments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assets")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("departments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("employees")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("offices")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("titles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("unique_identifiers")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployees (20090612231929)
+Migrating to CreateDepartments (20090612232656)
+Migrating to CreateTitles (20090612232735)
+Migrating to CreateOffices (20090612233335)
+Migrating to CreateAssetAssignments (20090614074803)
+Migrating to CreateAssets (20090614075322)
+Migrating to CreateUniqueIdentifiers (20090614173907)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("asset_assignments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("assets")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("departments")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("employees")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("offices")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("titles")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("unique_identifiers")[0m
+
+
+Processing EmployeesController#index (for 10.8.6.11 at 2009-06-14 10:50:20) [GET]
+  [4;36;1mEmployee Load (1.8ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.4ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.4ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.4ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+Completed in 60ms (View: 39, DB: 6) | 200 OK [http://it-valet.sugarcrm.net/employees]
+  [4;36;1mEmployee Load (1.3ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;35;1mEmployee Load (0.7ms)[0m   [0mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mEmployee Load (0.7ms)[0m   [0;1mSELECT * FROM "employees" LIMIT 1[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (8.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (9.5ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (10.8ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (9.6ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (10.3ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (10.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (10.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (9.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (9.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (9.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (9.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (9.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (8.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (9.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (10.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (9.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (9.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (10.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (8.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (9.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (10.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (9.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (9.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (9.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (9.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (9.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (9.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (9.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (10.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (9.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+
+
+Processing EmployeesController#show (for 10.8.6.11 at 2009-06-14 11:14:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/show
+  [4;36;1mDepartment Load (0.4ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 51ms (View: 34, DB: 2) | 200 OK [http://it-valet.sugarcrm.net/employees/1]
+
+
+Processing EmployeesController#edit (for 10.8.6.11 at 2009-06-14 11:14:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 1) [0m
+Rendering template within layouts/employees
+Rendering employees/edit
+Completed in 31ms (View: 17, DB: 0) | 200 OK [http://it-valet.sugarcrm.net/employees/1/edit]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployees (20090612231929)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "status_id" integer, "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "start_date" date, "end_date" date, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612231929')[0m
+Migrating to CreateDepartments (20090612232656)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612232656')[0m
+Migrating to CreateTitles (20090612232735)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612232735')[0m
+Migrating to CreateOffices (20090612233335)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612233335')[0m
+Migrating to CreateAssetAssignments (20090614074803)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614074803')[0m
+Migrating to CreateAssets (20090614075322)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614075322')[0m
+Migrating to CreateUniqueIdentifiers (20090614173907)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614173907')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("asset_assignments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assets")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("departments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("employees")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("offices")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("titles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("unique_identifiers")[0m
+
+
+Processing EmployeesController#index (for 10.8.6.11 at 2009-06-14 11:28:57) [GET]
+  [4;35;1mEmployee Load (2.1ms)[0m   [0mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;36;1mDepartment Load (0.4ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.7ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;36;1mDepartment Load (0.3ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `former_employee_path' for #<ActionView::Base:0x7fcf257c2170>) on line #29 of app/views/employees/index.html.erb:
+26:     <td><%=h employee.manager %></td>
+27:     <td><%=h employee.office %></td>
+28:     <td><%=h employee.remote %></td>
+29:     <td><%= link_to 'Show', employee %></td>
+30:     <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+31:     <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
+32:   </tr>
+
+    app/views/employees/index.html.erb:29
+    app/views/employees/index.html.erb:17:in `each'
+    app/views/employees/index.html.erb:17
+    app/controllers/employees_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmployeesController#index (for 10.8.6.11 at 2009-06-14 11:29:57) [GET]
+  [4;36;1mEmployee Load (2.1ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.4ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.6ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 66ms (View: 44, DB: 6) | 200 OK [http://it-valet.sugarcrm.net/employees]
+
+
+Processing EmployeesController#index (for 10.8.6.11 at 2009-06-14 11:34:55) [GET]
+  [4;35;1mEmployee Load (1.9ms)[0m   [0mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;36;1mDepartment Load (0.3ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.4ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;36;1mDepartment Load (0.3ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `former_employee_path' for #<ActionView::Base:0x7fcf256c0ec0>) on line #29 of app/views/employees/index.html.erb:
+26:     <td><%=h employee.manager %></td>
+27:     <td><%=h employee.office %></td>
+28:     <td><%=h employee.remote %></td>
+29:     <td><%= link_to 'Show', employee %></td>
+30:     <td><%= link_to 'Edit', edit_polymorphic_path(employee) %></td>
+31:     <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
+32:   </tr>
+
+    app/views/employees/index.html.erb:29
+    app/views/employees/index.html.erb:17:in `each'
+    app/views/employees/index.html.erb:17
+    app/controllers/employees_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (146.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmployeesController#index (for 10.8.6.11 at 2009-06-14 11:35:33) [GET]
+  [4;36;1mEmployee Load (1.9ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.4ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `show_polymorphic_path' for #<ActionView::Base:0x7fcf25691f08>) on line #29 of app/views/employees/index.html.erb:
+26:     <td><%=h employee.manager %></td>
+27:     <td><%=h employee.office %></td>
+28:     <td><%=h employee.remote %></td>
+29:     <td><%= link_to 'Show', show_polymorphic_path(employee) %></td>
+30:     <td><%= link_to 'Edit', edit_polymorphic_path(employee) %></td>
+31:     <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
+32:   </tr>
+
+    app/views/employees/index.html.erb:29
+    app/views/employees/index.html.erb:17:in `each'
+    app/views/employees/index.html.erb:17
+    app/controllers/employees_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (151.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmployeesController#index (for 10.8.6.11 at 2009-06-14 11:35:59) [GET]
+  [4;35;1mEmployee Load (1.9ms)[0m   [0mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;36;1mDepartment Load (0.4ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;36;1mEmployee Load (0.6ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;36;1mEmployee Load (0.5ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;35;1mOffice Load (0.3ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;36;1mDepartment Load (0.3ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;35;1mTitle Load (0.3ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+
+ActionView::TemplateError (undefined method `edit_former_employee_path' for #<ActionView::Base:0x7fcf25717ce8>) on line #29 of app/views/employees/index.html.erb:
+26:     <td><%=h employee.manager %></td>
+27:     <td><%=h employee.office %></td>
+28:     <td><%=h employee.remote %></td>
+29:     <td><%= link_to 'Edit', edit_polymorphic_path(employee) %></td>
+30:     <td><%= link_to 'Destroy', employee, :confirm => 'Are you sure?', :method => :delete %></td>
+31:   </tr>
+32: <% end %>
+
+    app/views/employees/index.html.erb:29
+    app/views/employees/index.html.erb:17:in `each'
+    app/views/employees/index.html.erb:17
+    app/controllers/employees_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (147.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmployeesController#index (for 10.8.6.11 at 2009-06-14 11:39:30) [GET]
+  [4;36;1mEmployee Load (1.9ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.4ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 64ms (View: 43, DB: 6) | 200 OK [http://it-valet.sugarcrm.net/employees]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "status_id" integer, "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "start_date" date, "end_date" date, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "nick_name" varchar(255), "maiden_name" varchar(255), "status_id" integer, "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "start_date" date, "end_date" date, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614173907')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612232656')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612231929')[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090614075322')[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090612232735')[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090612233335')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090614074803')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmployees (20090612231929)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "employees" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "name" varchar(255), "legal_name" varchar(255), "status_id" integer, "department_id" integer, "title_id" integer, "manager_id" integer, "office_id" integer, "start_date" date, "end_date" date, "remote" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612231929')[0m
+Migrating to CreateDepartments (20090612232656)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "departments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612232656')[0m
+Migrating to CreateTitles (20090612232735)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "titles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612232735')[0m
+Migrating to CreateOffices (20090612233335)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "offices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "address" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090612233335')[0m
+Migrating to CreateAssetAssignments (20090614074803)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "asset_assignments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "employee_id" integer, "asset_id" integer, "start_date" date, "end_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614074803')[0m
+Migrating to CreateAssets (20090614075322)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "make" varchar(255), "model" varchar(255), "purchase_order_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614075322')[0m
+Migrating to CreateUniqueIdentifiers (20090614173907)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "unique_identifiers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "asset_id" integer, "type" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090614173907')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("asset_assignments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("assets")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("departments")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("employees")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("offices")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("titles")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("unique_identifiers")[0m
+
+
+Processing EmployeesController#index (for 10.8.6.10 at 2009-06-14 19:18:51) [GET]
+  [4;35;1mEmployee Load (2.2ms)[0m   [0mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+
+ActionView::TemplateError (undefined method `first_name' for #<Employee:0x7fcf255911a8>) on line #20 of app/views/employees/index.html.erb:
+17: <% @employees.each do |employee| %>
+18:   <tr>
+19:     <td><%=h employee.type %></td>
+20:     <td><%=h employee.first_name %></td>
+21:     <td><%=h employee.last_name %></td>
+22:     <td><%=h employee.nick_name %></td>
+23:     <td><%=h employee.maiden_name %></td>
+
+    app/views/employees/index.html.erb:20
+    app/views/employees/index.html.erb:17:in `each'
+    app/views/employees/index.html.erb:17
+    app/controllers/employees_controller.rb:7:in `index'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing EmployeesController#index (for 10.8.6.10 at 2009-06-14 19:42:27) [GET]
+  [4;36;1mEmployee Load (1.8ms)[0m   [0;1mSELECT * FROM "employees" [0m
+Rendering template within layouts/employees
+Rendering employees/index
+  [4;35;1mDepartment Load (0.4ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 2) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 3) [0m
+  [4;35;1mEmployee Load (0.5ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mOffice Load (0.3ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mDepartment Load (0.3ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 2) [0m
+  [4;36;1mTitle Load (0.3ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "departments" WHERE ("departments"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "titles" WHERE ("titles"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "employees" WHERE ("employees"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "offices" WHERE ("offices"."id" = 1) [0m
+Completed in 60ms (View: 41, DB: 6) | 200 OK [http://it-valet.sugarcrm.net/employees]
