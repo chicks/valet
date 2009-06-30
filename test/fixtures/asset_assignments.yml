@@ -4,16 +4,89 @@ Eric Employee Laptop:
   employee_id: 1
   asset_id: 1
   start_date: 2009-06-14
-  end_date: 
+  end_date:
 
-Eric Employee Phone:
+Eric Employee MobilePhone:
   employee_id: 1
   asset_id: 2
   start_date: 2009-06-14
-  end_date: 
+  end_date:
 
-Eric Employee Data Card:
+Eric Employee WirelessDataCard:
   employee_id: 1
   asset_id: 3
   start_date: 2009-06-14
-  end_date: 
+  end_date:
+
+Molly Manager Laptop:
+  employee_id: 2
+  asset_id: 4
+  start_date: 2009-06-14
+  end_date:
+
+Molly Manager MobilePhone:
+  employee_id: 2
+  asset_id: 5
+  start_date: 2009-06-14
+  end_date:
+
+Molly Manager WirelessDataCard:
+  employee_id: 2
+  asset_id: 6
+  start_date: 2009-06-14
+  end_date:
+
+Danny Director Laptop:
+  employee_id: 3
+  asset_id: 7
+  start_date: 2009-06-14
+  end_date:
+
+Danny Director MobilePhone:
+  employee_id: 3
+  asset_id: 8
+  start_date: 2009-06-14
+  end_date:
+
+Danny Director WirelessDataCard:
+  employee_id: 3
+  asset_id: 9
+  start_date: 2009-06-14
+  end_date:
+
+Erwin Executive Laptop:
+  employee_id: 4
+  asset_id: 10
+  start_date: 2009-06-14
+  end_date:
+
+Erwin Executive MobilePhone:
+  employee_id: 4
+  asset_id: 11
+  start_date: 2009-06-14
+  end_date:
+
+Erwin Executive WirelessDataCard:
+  employee_id: 4
+  asset_id: 12
+  start_date: 2009-06-14
+  end_date:
+
+Tommy Terminated Laptop:
+  employee_id: 5
+  asset_id: 13
+  start_date: 2009-06-14
+  end_date:
+
+Tommy Terminated MobilePhone:
+  employee_id: 5
+  asset_id: 14
+  start_date: 2009-06-14
+  end_date:
+
+Tommy Terminated WirelessDataCard:
+  employee_id: 5
+  asset_id: 15
+  start_date: 2009-06-14
+  end_date:
+

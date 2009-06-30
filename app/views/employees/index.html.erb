@@ -10,10 +10,11 @@
     <th>Manager</th>
     <th>Office</th>
     <th>Remote</th>
+    <th>Actions</th>
   </tr>
 
 <% @employees.each do |employee| %>
-  <tr>
+  <tr id="employee_<%= employee.id %>">
     <td><%=h employee.type %></td>
     <td><%=h employee.name %></td>
     <td><%=h employee.legal_name %></td>
@@ -22,6 +23,9 @@
     <td><%=h employee.manager %></td>
     <td><%=h employee.office %></td>
     <td><%=h employee.remote %></td>
+    <td>
+      
+    </td>
   </tr>
 <% end %>
 </table>

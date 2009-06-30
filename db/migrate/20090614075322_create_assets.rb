@@ -7,6 +7,7 @@ class CreateAssets < ActiveRecord::Migration
       t.string :created_by
       t.string :updated_by
       t.integer :purchase_order_id
+      t.integer :profile_id, :default => 1
 
       t.timestamps
     end

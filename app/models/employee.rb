@@ -1,8 +1,9 @@
 class Employee < ActiveRecord::Base
-  belongs_to :title
-  belongs_to :department
+  belongs_to :title, :class_name => "EmployeeTitle"
+  belongs_to :department, :class_name => "EmployeeDepartment"
   belongs_to :office
   belongs_to :manager, :class_name => "Employee"
+  belongs_to :user
   has_many   :subordinates, :class_name => "Employee", :foreign_key => "manager_id"
   has_many   :asset_assignments
   has_many   :assets, :through => :asset_assignments

@@ -1,0 +1,56 @@
+ul.errors li {
+    color: red;
+}
+
+div.toolbar {
+    padding: 8px;
+    background-color: #F0F0F0;
+    border: 1px solid #D8D8D8;
+    margin-bottom: 20px;
+}
+
+div.toolbar ul li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+div.toolbar ul {
+    height: 20px;
+}
+
+/* Haphazard attempt at forms */
+form.form {
+    padding: 8px;
+    background: #EAF2F5;
+    border: 1px solid #BEDCE7;
+}
+
+form.form td {
+    color: #555555;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+form.form .label {
+    padding-right: 18px;
+}
+
+form.form h1 {
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+form.form h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+form.form span.error {
+    color: red;
+}
+
+form.form .buttons {
+    margin-top: 18px;
+}
+

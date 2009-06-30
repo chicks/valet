@@ -1,0 +1,11 @@
+/*
+ * For icons name them icon-<action> where action is a one word with no dashses,
+ * For example: icon-save or icon-saveall
+ */
+/*
+.icon-save { background-image: url(/images/fam/disk.png) !important; background-repeat: no-repeat; }
+.icon-discard { background-image: url(/images/fam/delete.png) !important; background-repeat: no-repeat; }
+.icon-refresh { background-image: url(/images/fam/arrow_refresh.png) !important; background-repeat: no-repeat; }
+.icon-newticket { background-image: url(/images/fam/note_add.png) !important; background-repeat: no-repeat; }
+.icon-newproject { background-image: url(/images/fam/application_add.png) !important; background-repeat: no-repeat; }
+*/

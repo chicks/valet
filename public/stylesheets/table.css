@@ -1,0 +1,26 @@
+table.grid {
+    clear: none;
+    background-color: #f3f3f3;
+    border: 1px solid #D8D8D8;
+    width: 100%;
+    padding: 0;
+}
+
+table.grid td, table.grid th {
+    padding: 4px 8px 4px 8px;
+    margin: 0;
+}
+
+table.grid th {
+    text-align: left;
+}
+
+table.grid td {
+    border-top: 1px solid #D8D8D8;
+    color: #555555;
+}
+
+table.grid .checkbox {
+    padding: 0;
+    width: 14px;
+}

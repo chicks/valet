@@ -1,23 +1,121 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-MacBook Pro:
+MacBook Pro1:
   id: 1
   type: Laptop
   make: Apple
   model: MacBook Pro
   purchase_order_id: 1
+  profile_id: 2
 
-iPhone:
+iPhone1:
   id: 2
   type: MobilePhone
   make: Apple
   model: iPhone
   purchase_order_id: 1
+  profile_id: 3
 
-Wireless Data Card:
+Wireless Data Card1:
   id: 3
   type: WirelessDataCard
   make: Pantech
   model: WD-124
   purchase_order_id: 2
+  profile_id: 1
 
+MacBook Pro2:
+  id: 4
+  type: Laptop
+  make: Apple
+  model: MacBook Pro
+  purchase_order_id: 1
+  profile_id: 2
+
+iPhone2:
+  id: 5
+  type: MobilePhone
+  make: Apple
+  model: iPhone
+  purchase_order_id: 1
+  profile_id: 3
+
+Wireless Data Card2:
+  id: 6
+  type: WirelessDataCard
+  make: Pantech
+  model: WD-124
+  purchase_order_id: 2
+  profile_id: 1
+
+MacBook Pro3:
+  id: 7
+  type: Laptop
+  make: Apple
+  model: MacBook Pro
+  purchase_order_id: 1
+  profile_id: 2
+
+iPhone3:
+  id: 8
+  type: MobilePhone
+  make: Apple
+  model: iPhone
+  purchase_order_id: 1
+  profile_id: 3
+
+Wireless Data Card3:
+  id: 9
+  type: WirelessDataCard
+  make: Pantech
+  model: WD-124
+  purchase_order_id: 2
+  profile_id: 1
+
+MacBook Pro4:
+  id: 10
+  type: Laptop
+  make: Apple
+  model: MacBook Pro
+  purchase_order_id: 1
+  profile_id: 2
+
+iPhone4:
+  id: 11
+  type: MobilePhone
+  make: Apple
+  model: iPhone
+  purchase_order_id: 1
+  profile_id: 3
+
+Wireless Data Card4:
+  id: 12
+  type: WirelessDataCard
+  make: Pantech
+  model: WD-124
+  purchase_order_id: 2
+  profile_id: 1
+
+MacBook Pro5:
+  id: 13
+  type: Laptop
+  make: Apple
+  model: MacBook Pro
+  purchase_order_id: 1
+  profile_id: 2
+
+iPhone5:
+  id: 14
+  type: MobilePhone
+  make: Apple
+  model: iPhone
+  purchase_order_id: 1
+  profile_id: 3
+
+Wireless Data Card5:
+  id: 15
+  type: WirelessDataCard
+  make: Pantech
+  model: WD-124
+  purchase_order_id: 2
+  profile_id: 1

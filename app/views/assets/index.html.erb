@@ -1,0 +1,30 @@
+<table>
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Type</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Assigned To</th>
+      <th>Identifier Type</th>
+      <th>Identifier</th>
+      <th>Identifiers</th>
+    </tr>
+    <% @assets.each do |asset| -%>
+    <tr>
+      <td><%=h asset.type.to_s.titleize %></td>
+      <td><%=h asset.make %></td>
+      <td><%=h asset.model %></td>
+      <td><%=h asset.employee %></td>
+      <td><%=h asset.primary_uid.type %></td>
+      <td><%=h asset.primary_uid %></td>
+      <td>
+      <% asset.unique_identifiers.each do |uid| -%>
+        <%=h uid.type %>: <%=h uid.uid %><br />  
+      <% end -%>
+      </td>
+    </tr>
+    <% end -%>
+  </tbody>
+</table>

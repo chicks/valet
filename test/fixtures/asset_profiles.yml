@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+Default:
+  id: 1
+  name: Default Profile
+  preferences: {primary_uid: FirstResult}
+
+MacBook Pro:
+  id: 2
+  name: Apple MacBook Pro
+  preferences: {primary_uid: SerialNumber} 
+
+iPhone:
+  id: 3
+  name: Apple iPhone
+  preferences: {primary_uid: ESN} 
